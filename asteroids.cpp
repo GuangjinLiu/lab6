@@ -760,7 +760,7 @@ void render()
 	//
 	showName();
 	
-	drawBox(100, 100);
+	drawBox(gl.xres/2, gl.yres/2);
 	//-------------
 	//Draw the ship
 	glColor3fv(g.ship.color);
