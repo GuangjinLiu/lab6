@@ -287,7 +287,9 @@ void check_mouse(XEvent *e);
 int check_keys(XEvent *e);
 void physics();
 void render();
-
+//external functions
+extern void showName();
+extern void drawBox(int, int);
 //==========================================================================
 // M A I N
 //==========================================================================
@@ -756,6 +758,9 @@ void render()
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids destroyed: %i", g.dsg );
 	//
+	showName();
+	
+	drawBox(gl.xres/2, gl.yres/2);
 	//-------------
 	//Draw the ship
 	glColor3fv(g.ship.color);
